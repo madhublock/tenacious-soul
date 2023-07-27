@@ -1,0 +1,6 @@
+
+
+```
+kubectl config get-contexts
+kubectl config use-context CONTEXT_NAME
+```

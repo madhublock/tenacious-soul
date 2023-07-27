@@ -1,0 +1,46 @@
+---
+author: Madhu Anugu
+pubDatetime: 2023-07-07T05:45:00.737Z
+title: Kubernetes
+postSlug: kub-beginner
+featured: true
+tags:
+  - release
+description: Kubernetes Cert by Mumshad Munambeth
+---
+
+## API Server
+
+API Server : It acts as front end for Kubernetes.
+The users, devices, temrinals all  communicate with API Server to interact with kubernetes cluseter
+
+## etcd
+etcd: It is a distributed reliable Key value store used by kubernetes to store all data used to
+manage the cluster.
+
+Think of it this way, when you have multiple nodes and multiple masters in your cluster,
+etcd stores all that information on all the nodes in the cluster in a distributed manner.
+
+Etcd is responsible for implementing locks within the cluster to ensure that there are no conflicts between the masters.
+
+## Scheduler
+
+The scheduler is responsible for distributing work or containers across multiple nodes.
+It looks for newly created containers and assigns them to nodes.
+
+## Controller
+
+The controllers are the brain behind orchestration. They're responsible for noticing and responding when nodes, containers or endpoints goes down.
+The controllers make decisions to bring up new containers in such cases.
+
+
+## Container Runtime
+
+The container runtime is the underlying software that is used to run containers.
+In our case, it happens to be Docker, but there are other options as well.
+
+## Kubelet
+And finally, kubelet is the agent that runs on each node in the cluster.
+The agent is responsible for making sure that the containers are running on the nodes as expected.
+
+![Kubernetes Components Architecture Diagram](/images/kube_arch_components.png)
